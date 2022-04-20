@@ -1,0 +1,81 @@
+<!-- <div class="modal-dialog modal-lg modal-dialog-scrollable"> -->
+<div class="containerr">
+  <div class="modal-content ">
+    <div class="modal-header ">
+      <h2 class="modal-title" id="staticBackdropLabel">
+        Select a resume</h2>
+    </div>
+    <div class="modal-body ">
+      <span>
+        Get insights for formatting issues, keywords, and more.
+      </span>
+      <div style="background-color: aquamarine; padding: 10px;">
+        Supported upload formats: 5MB max in .DOC, .DOCX, or .PDF
+      </div>
+      <div>
+        <i style="float:right;font-size: 40px;" class="bi bi-three-dots"></i>
+        <h5>Resume-Mostafa-Abdallah </h5>
+        <p>Edited on October 15, 2021, 12:59 PM </p>
+      </div>
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <br>
+          <br>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">
+
+                <div class="card" style="width:25rem">
+                  <div class="card-body">
+                    <form [formGroup]="formTemplate" (submit)="onSubmit(formTemplate.value)">
+                      <div class="text-center">
+                        <img [src]="imgSrc" width="350px" height="250px" (click)="fileUploader.click()">
+                      </div>
+                      <br>
+                      <div class="form-group">
+                        <label>Select file to upload</label>
+                        <br>
+                        <br>
+                        <input type="file" accept="image/*" class="form-control" #fileUploader
+                          formControlName="imageUrl" (change)="showPreview($event)">
+                        <div class="text-danger" *ngIf="isSubmitted && formControls.imageUrl.errors?.required">This
+                          field is
+                          required.
+                        </div>
+                      </div>
+                      <br>
+                      <div class="form-group">
+                        <input class="form-control" formControlName="caption" placeholder="Caption">
+                        <div class="text-danger" *ngIf="isSubmitted && formControls.caption.errors?.required">This field
+                          is
+                          required.
+                        </div>
+                      </div>
+                      <br>
+                      <div class="form-group">
+                        <select formControlName="category" class="form-control">
+                          <option value="Pdf" selected>Pdf</option>
+                          <option value="Word">Word</option>
+                          <option value="Image">Image</option>
+
+                        </select>
+                      </div>
+                      <br>
+                      <div class="form-row">
+                        <!-- <div class="form-group col-md-6">
+                          <a routerLink="/list" class="btn btn-primary btn-block float-right">All Files</a>
+                        </div> -->
+                        <br>
+                        <div class="form-group col-md-6">
+                          <button type="submit" class="btn btn-success btn-block float-right">Submit</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

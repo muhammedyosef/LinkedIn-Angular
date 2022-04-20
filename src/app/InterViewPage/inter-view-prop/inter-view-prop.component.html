@@ -1,0 +1,161 @@
+<div class="moooo">
+  <div class="container-fluid ">
+    <div class="row">
+      <div class="col-sm-5">
+        <div id="alll" class=" card shadow">
+          <div class="card-body">
+            <h2 class="card-header">
+              Common
+              Questions <br />
+              <small id="small26"> 26 questions</small>
+              <button id="btnheadr" type="button" class="btn btn-primary">
+                Primary
+              </button>
+            </h2>
+            <br>
+            <app-qustions *ngFor="let qus of qustionsArray" [qustions]="qus"></app-qustions>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-7">
+        <div class="card shadow">
+          <div class="card-body">
+            <h1 id="cardup" class="card-header">
+              Describe your most challenging project.
+              <br />
+              <br />
+              <br />
+              <button id="btn583" type="button" class="btn btn-primary active" data-bs-toggle="button"
+                autocomplete="off" aria-pressed="true">
+                parctice and get feedback</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 583,221 people viewed
+              this
+              question
+            </h1>
+            <div class="card-body">
+              <span class="card-text">
+                Overview <br />
+                <br />
+                Employers want to get a sense of what ‘challenging’ means to
+                you. They also want to know how you handled the situation in a
+                calm way. They’re looking for a storyline to prove that you can
+                turn a bad story into a good story.
+              </span>
+            </div>
+          </div>
+          <br>
+          <br>
+          <br />
+          <div class="card shadow">
+            <h2 id="prime" class="card-header">
+              Unlock sample answers with expert feedback using LinkedIn
+              <br />Premium
+              <br />
+              <button id="btnprime" type="button" class="btn btn-primary active" data-bs-toggle="button"
+                autocomplete="off" aria-pressed="true">
+                &nbsp; &nbsp;&nbsp;&nbsp; Try Free for &nbsp;1&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp; Month
+              </button>
+            </h2>
+            <!-- Here -->
+            <app-simper-ancwer *ngFor="let simpel of simpelsArray" [simpels]="simpel"></app-simper-ancwer>
+          </div>
+        </div>
+        <div class="card shadow">
+          <div class="card-body">
+            <h2>Ancwer framwork</h2>
+            <hr />
+            <div class="card mb-3" style="max-width: 540px">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="assets/img/videoperson.png" class="assets/img/img-fluid rounded-start" />
+                </div>
+                <div class="col-md-8">
+                  <div id="cardbody1" class="card-body">
+                    <h2 class="card-title">
+                      How to approach past experience
+                      questions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </h2>
+                    By Linda Raynier CPA, CA, Career Strategist
+                    <button id="btnview" type="button" class="btn btn-outline-secondary">
+                      View
+                    </button>
+
+                    <p class="card-text">
+                      <small class="text-muted">2 mins·127,114 views</small>
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p>
+              <hr>
+            <p>Respond to this kind of question with a compelling story that
+              uses the "SAR" framework: <br>
+              situation, action, and results.
+              <br>
+              <br>
+            <h6>Describe the situation.</h6>
+            <p> Talk about the initial events that occurred. What were the problems that you were
+              experiencing? What needed to be solved and what resources did you have--or not have? This</p>
+            <a id="btncollabs" class="btn btn-outline-primary" data-bs-toggle="collapse" href="#collapseExample"
+              role="button" aria-expanded="false" aria-controls="collapseExample">
+              See More
+            </a>
+
+            <div class="collapse" id="collapseExample">
+              <h6>Get into the action.</h6>
+              Speak about the key milestones that you went through. Tell them what you did to turn the
+              <br>
+              situation around. Don't go into too much detail though. It should only be about two to three
+              <br>
+              sentences, and try to use active verbs, things like “I implemented” or “I persuaded”.
+              <br>
+              <br>
+              <h6> Show the results.</h6>
+              Let them know how well things turned out, how the problems were solved and what you may <br>
+              have learned along the way. Try to include a clincher at the end, like dollars saved or
+              improved <br>
+              profitability. It drives home that you did a great thing.
+              <a id="btncollabs" class="btn btn-outline-primary" data-bs-toggle="collapse" href="#collapseExample"
+                role="button" aria-expanded="false" aria-controls="collapseExample">
+                See Less
+              </a>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="card shadow">
+          <div class="card-body">
+
+            <h2>Tipe</h2>
+
+            <ul>
+              <li>Have a clear story with a specific challenge.</li>
+              <li>Describe the negative impact if you hadn’t resolved the issue.</li>
+              <li>Discuss action steps you took and talk about the positive impact.</li>
+            </ul>
+          </div>
+
+        </div>
+        <br>
+        <br>
+        <div class="card shadow">
+          <div class="card-body">
+            <h4>Did you find this content helpful?</h4>
+            <button id="btnfeedback" type="button" class="btn btn-outline-secondary">
+              Send feedback.
+            </button>
+          </div>
+
+        </div>
+        <br>
+
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+</div>

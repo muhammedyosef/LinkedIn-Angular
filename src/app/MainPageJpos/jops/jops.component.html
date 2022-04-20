@@ -1,0 +1,333 @@
+<app-header></app-header>
+<br>
+<div class="container mx-5" id="cont">
+  <div class="row mb-3 ">
+    <div class="col-3">
+      <div class="card shadow ">
+        <div class="card-body">
+          <div class="leftside">
+
+            <a id="mark" routerLink="/Myjobs"> <i id="mark" class="bi bi-bookmark-fill"></i> &nbsp;&nbsp;Myjobs </a>
+
+            <br />
+            <br />
+
+            <a id="mark" href="#" data-bs-toggle="modal" data-bs-target="#sstaticBackdrop">
+              <i id="mark" class="bi bi-bell-fill"></i>&nbsp;&nbsp;job Alerts
+            </a>
+            <br />
+            <br>
+
+            <a id="mark" routerLink="/salary"> <i id="mark" class="bi bi-cash"></i> &nbsp;&nbsp;Salary </a>
+            <br />
+
+          </div>
+
+        </div>
+
+      </div>
+      <br>
+      <div class="card shadow ">
+        <div class="card-body">
+          <div class="leftside">
+
+            <a id="mark" href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <i id="mark" class="bi bi-clipboard-check"></i> &nbsp;&nbsp;Skill
+              Assessments
+            </a>
+
+            <br />
+            <br />
+            <a id="mark" routerLink="/Ainterview">
+              <i id="mark" class="bi bi-file-earmark-richtext-fill"></i>&nbsp;&nbsp;interView Prop
+            </a>
+            <br />
+            <br />
+            <a id="mark" routerLink="/image">
+              <i id="mark" class="bi bi-gear-fill"></i> &nbsp;&nbsp;Application Setting
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-5">
+      <div class="card shadow">
+        <div class="card-body">
+          <h5 class="card-title">
+            Remote opportunities
+            <br>
+          </h5>
+          <small>Because you expressed interest in remote work</small>
+          <app-middel-card *ngFor="let card of cardArray index as i " [midellcard]="card"></app-middel-card>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card shadow">
+        <div class="card-body">
+          <h5 class="card-title">
+            <h2>Recommended Newsletter</h2>
+          </h5>
+          <img src="assets/img/2.jpg" class="img-fluid rounded-start" />
+          <h1>Building a career that works for you</h1>
+          <h3>
+            By Andrew Seaman <br />
+            Building a career that fulfills and <br />supports you sounds like a
+            big <br />undertaking, but it doesn’t have to be. <br />
+            In fact, there are a few simple steps <br />
+            that you can take to help grow your<br />
+            career while balancing your needs. For
+            <br />
+            example:
+          </h3>
+          <br>
+          <button id="btn" type="button" class="btn btn-outline-primary">
+            Read More
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content ">
+        <div class="modal-header ">
+          <h5 class="modal-title" id="staticBackdropLabel">Skill Assessments</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body ">
+          <h2>
+            Check your skill level. Answer 15 multiple choice <br />
+            questions, score in the top 30%, and earn a skill <br />
+            badge.
+            <a href="">Learn more</a>
+            <img id="imgright" src="assets/img/2.jpg" />
+          </h2>
+          <br><br>
+          <br>
+          <hr>
+          <form class="d-flex">
+            <button id="btnall" type="button" class="btn btn-outline-dark">
+              All
+            </button>
+            <button id="btnRec" type="button" class="btn btn-success">
+              Recommanded
+            </button>
+            <button id="btnRec" type="button" class="btn btn-outline-dark">
+              Industry Knowledge
+            </button>
+            <button id="btnRec" type="button" class="btn btn-outline-dark">
+              Tools & Technology
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search" />
+          </form>
+          <br>
+          <app-skills *ngFor="let skill of skillarray index as i" [skillcard]="skill"></app-skills>
+          <div class="modal-footer">
+            <button data-bs-dismiss="modal" aria-label="Close" class="btn btn-primary rounded-pill">Done</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="sstaticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content ">
+        <div class="modal-header ">
+          <span class="modal-title" id="staticBackdropLabel">Job alerts</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body ">
+          <span>
+            <h3 id="staticBackdropLabe">mobile engineer</h3>
+            <p>Egypt Cairo <br>
+              Frequency: Daily via email and notification</p>&nbsp;&nbsp;&nbsp;&nbsp;
+            <i style="font-size: 30px; float:right;margin-top: -100px;" class="bi bi-trash-fill"> </i>
+            <i style="font-size: 30px; float:right ;margin-top: -100px;" class="bi bi-pen">&nbsp;&nbsp;
+              &nbsp;&nbsp;</i>
+          </span>
+          <span>
+            <h5 id="staticBackdropLabe">android developer</h5>
+            <p>Egypt<br>
+              Filters: Full-time · Contract · Part-time and 2 more <br>
+              Frequency: Daily via email and notification</p>
+            <i style="font-size: 30px; float:right;margin-top: -100px;" class="bi bi-trash-fill"> </i>
+            <i style="font-size: 30px; float:right ;margin-top: -100px;" class="bi bi-pen">&nbsp;&nbsp;
+              &nbsp;&nbsp;</i>
+          </span>
+          <span>
+            <h5 id="staticBackdropLabe">software engineer</h5>
+            <div>Egypt<br>
+              <br>
+              Frequency: Daily via email and notification
+            </div>
+            <i style="font-size: 30px; float:right;margin-top: -100px;" class="bi bi-trash-fill"> </i>
+            <i style="font-size: 30px; float:right ;margin-top: -100px;" class="bi bi-pen">&nbsp;&nbsp;
+              &nbsp;&nbsp;</i>
+          </span>
+          <br>
+          <hr>
+          <span>
+            <h5 id="staticBackdropLabe">Job recommendations
+            </h5>
+            <p>
+              Based on your job alerts, activity, and profile
+              <a href="#"> LearnMore</a>
+            </p>
+            <div style="margin-top: -180px;" class="form-check form-switch">
+              <input id="btntogle" class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
+              <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+            </div>
+
+          </span>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary rounded-pill" data-bs-dismiss="modal"
+            aria-label="Close">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="modal fade" id="bustaticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content ">
+        <div class="modal-header ">
+          <h5 class="modal-title" id="staticBackdropLabel">
+            Select a resume</h5>
+
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body ">
+          <p>
+            Get insights for formatting issues, keywords, and more.
+          </p>
+          <div style="background-color: aquamarine; padding: 10px;">
+            Supported upload formats: 5MB max in .DOC, .DOCX, or .PDF
+          </div>
+          <div>
+            <i style="float:right;font-size: 40px;" class="bi bi-three-dots"></i>
+            <h5>Resume-Mostafa-Abdallah </h5>
+            <p>Edited on October 15, 2021, 12:59 PM </p>
+          </div>
+          <div *ngIf="files" class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <br>
+              <br>
+              <div class="col-md-4">
+                <img src="assets/img/pdf.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{fileName}}</h5>
+                  <p class="card-text">
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div>
+            <button *ngIf="files" style="border-radius: 12px;" type="button" class="btn btn-outline-primary">
+              Save File</button>
+          </div>
+          <p *ngIf="!files">No File Selected ....</p>
+          <div class="modal-footer">
+
+            <button style="border-radius: 12px;" type="button" class="btn btn-outline-primary">Creat From
+              Profiel</button>
+
+            <input style="border-radius: 12px;" class="file-input" (change)="onFileSelected($event)" #fileUpload
+              type="file" id="Uplaoder" class="file-upload" multiple="multiple" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="card">
+        <div class="card-header bg-transparent">
+          <h4>Visit More Linkedin Products</h4>
+        </div>
+        <div class="card-body">
+          <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+              <i class="bi bi-youtube"></i>
+              <p>Learning</p>
+            </li>
+            <li class="nav-item">
+              <i class="bi bi-textarea"></i>
+              <p>Insights</p>
+            </li>
+            <li class="nav-item">
+              <i class="bi bi-briefcase"></i>
+              <p>Post a job</p>
+            </li>
+            <li class="nav-item">
+              <i class="bi bi-geo"></i>
+              <p>Advertise</p>
+            </li>
+          </ul>
+          <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+              <i class="bi bi-search"></i>
+              <p>Find Leads</p>
+            </li>
+            <li class="nav-item">
+              <i class="bi bi-people"></i>
+              <p>Groups</p>
+            </li>
+            <li class="nav-item">
+              <i class="bi bi-info-lg"></i>
+              <p>Services</p>
+            </li>
+            <li class="nav-item">
+              <i class="bi bi-cash-coin"></i>
+              <p>Salary</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <br>
+      <div class="card">
+        <div class="card-header bg-transparent">
+          <h4>LinkedIn Business Services</h4>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Talent Solutions</h5>
+          <p class="card-text"><small class="text-muted">Find, attract and recruit talent</small></p>
+          <h5>Sales Solutions</h5>
+          <p class="card-text"><small class="text-muted">Find, attract and recruit talent</small></p>
+          <h5>Post a job for free</h5>
+          <p class="card-text"><small class="text-muted">Find, attract and recruit talent</small></p>
+          <h5>Marketing Solutions</h5>
+          <p class="card-text"><small class="text-muted">Find, attract and recruit talent</small></p>
+          <h5>Learning Solutions</h5>
+          <p class="card-text"><small class="text-muted">Find, attract and recruit talent</small></p>
+
+        </div>
+        <div class="card-footer bg-transparent">
+          <h4>Create a Company Page <i class="bi bi-plus"></i></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

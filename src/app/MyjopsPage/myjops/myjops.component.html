@@ -1,0 +1,239 @@
+<app-header></app-header>
+<br>
+<div class="container" id="cont">
+  <div class="row ">
+    <div class="col-sm-3">
+      <div class="card shadow">
+        <div class="card-body">
+          <div class="card-header" id="bi">
+            <a href="#">
+              <i class="bi bi-bookmark-fill"> </i> &nbsp;&nbsp;My items
+            </a>
+            <hr>
+            <span class="d-flex">
+              <span id="my">jobs:&nbsp;&nbsp;</span>
+              {{cardArray.length}}
+              <span id="number"></span>
+            </span>
+            <div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-sm-5">
+      <div class="card shadow mx-1">
+        <div class="card-body mx-3">
+          <h2 class="card-title">My jobs</h2>
+          <button id="btnjop" type="button" class="btn mx-5 btn-success">
+            Saved
+          </button>
+
+          <button id="btnjop" type="button" class="btn btn-outline-primary">
+            Applied
+          </button>
+          <hr>
+          <app-midel-card *ngFor="let card of cardArray" [mymidellcard]="card"></app-midel-card>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="card shadow">
+        <div class="card-body">
+          <h3 class="card-title">
+            Mostafa, learn what hiring managers look for in answers to top
+            interview questions
+          </h3>
+          <hr>
+          <p class="card-text">
+            <span>
+              <a id="text"
+                href="https://www.linkedin.com/interview-prep/assessments/urn:li:fs_assessment:(1,a)/question/urn:li:fs_assessmentQuestion:(10020,aq20)/">
+                <img src="assets/img/img4.jfif " style="width: 20%" />
+                <h2 id="textunder ">
+                  Tell Me about Sometings you,ve accomplised that you are
+                  proud of
+                </h2>
+              </a>
+            </span>
+          </p>
+          <hr>
+          <span>
+            <a id="text"
+              href="https://www.linkedin.com/interview-prep/assessments/urn:li:fs_assessment:(1,a)/question/urn:li:fs_assessmentQuestion:(10020,aq20)/">
+              <img src="assets/img/img4.jfif " style="width: 20%" />
+              <p>
+                <h2 id="textunder ">
+                  Tell Me about Sometings you,ve accomplised that you are
+                  proud of
+                </h2>
+            </a>
+          </span>
+          <hr>
+          <span>
+            <a id="text"
+              href="https://www.linkedin.com/interview-prep/assessments/urn:li:fs_assessment:(1,a)/question/urn:li:fs_assessmentQuestion:(10020,aq20)/">
+              <img src="assets/img/img4.jfif " style="width: 20%" />
+              <h2 id="textunder ">
+                Tell Me about Sometings you,ve accomplised that you are
+                proud of
+              </h2>
+            </a>
+          </span>
+          <p id="seeAll">
+            <small>See all questions</small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="card">
+      <div class="card-header bg-transparent">
+        <h4>Visit More Linkedin Products</h4>
+      </div>
+      <div class="card-body">
+        <ul class="nav nav-pills nav-fill">
+          <li class="nav-item">
+            <i class="bi bi-youtube"></i>
+            <p>Learning</p>
+          </li>
+          <li class="nav-item">
+            <i class="bi bi-textarea"></i>
+            <p>Insights</p>
+          </li>
+          <li class="nav-item">
+            <i class="bi bi-briefcase"></i>
+            <p>Post a job</p>
+          </li>
+          <li class="nav-item">
+            <i class="bi bi-geo"></i>
+            <p>Advertise</p>
+          </li>
+        </ul>
+        <ul class="nav nav-pills nav-fill">
+          <li class="nav-item">
+            <i class="bi bi-search"></i>
+            <p>Find Leads</p>
+          </li>
+          <li class="nav-item">
+            <i class="bi bi-people"></i>
+            <p>Groups</p>
+          </li>
+          <li class="nav-item">
+            <i class="bi bi-info-lg"></i>
+            <p>Services</p>
+          </li>
+          <li class="nav-item">
+            <i class="bi bi-cash-coin"></i>
+            <p>Salary</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <br>
+    <div class="card">
+      <div class="card-header bg-transparent">
+        <h4>LinkedIn Business Services</h4>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Talent Solutions</h5>
+        <p class="card-text"><small class="text-muted">Find, attract and recruit talent</small></p>
+        <h5>Sales Solutions</h5>
+        <p class="card-text"><small class="text-muted">Find, attract and recruit talent</small></p>
+        <h5>Post a job for free</h5>
+        <p class="card-text"><small class="text-muted">Find, attract and recruit talent</small></p>
+        <h5>Marketing Solutions</h5>
+        <p class="card-text"><small class="text-muted">Find, attract and recruit talent</small></p>
+        <h5>Learning Solutions</h5>
+        <p class="card-text"><small class="text-muted">Find, attract and recruit talent</small></p>
+
+      </div>
+      <div class="card-footer bg-transparent">
+        <h4>Create a Company Page <i class="bi bi-plus"></i></h4>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="card">
+      <div class="card-header bg-transparent">
+        <h4>Visit More Linkedin Products</h4>
+      </div>
+      <div class="card-body">
+        <ul class="nav nav-pills nav-fill">
+          <li class="nav-item">
+            <i class="bi bi-youtube"></i>
+            <p>Learning</p>
+          </li>
+          <li class="nav-item">
+            <i class="bi bi-textarea"></i>
+            <p>Insights</p>
+          </li>
+          <li class="nav-item">
+            <i class="bi bi-briefcase"></i>
+            <p>Post a job</p>
+          </li>
+          <li class="nav-item">
+            <i class="bi bi-geo"></i>
+            <p>Advertise</p>
+          </li>
+        </ul>
+        <ul class="nav nav-pills nav-fill">
+          <li class="nav-item">
+            <i class="bi bi-search"></i>
+            <p>Find Leads</p>
+          </li>
+          <li class="nav-item">
+            <i class="bi bi-people"></i>
+            <p>Groups</p>
+          </li>
+          <li class="nav-item">
+            <i class="bi bi-info-lg"></i>
+            <p>Services</p>
+          </li>
+          <li class="nav-item">
+            <i class="bi bi-cash-coin"></i>
+            <p>Salary</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <br>
+    <div class="card">
+      <div class="card-header bg-transparent">
+        <h4>LinkedIn Business Services</h4>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Talent Solutions</h5>
+        <p class="card-text"><small class="text-muted">Find, attract and recruit talent</small></p>
+        <h5>Sales Solutions</h5>
+        <p class="card-text"><small class="text-muted">Find, attract and recruit talent</small></p>
+        <h5>Post a job for free</h5>
+        <p class="card-text"><small class="text-muted">Find, attract and recruit talent</small></p>
+        <h5>Marketing Solutions</h5>
+        <p class="card-text"><small class="text-muted">Find, attract and recruit talent</small></p>
+        <h5>Learning Solutions</h5>
+        <p class="card-text"><small class="text-muted">Find, attract and recruit talent</small></p>
+
+      </div>
+      <div class="card-footer bg-transparent">
+        <h4>Create a Company Page <i class="bi bi-plus"></i></h4>
+      </div>
+    </div>
+  </div>
+</div>

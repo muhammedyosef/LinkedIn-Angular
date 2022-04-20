@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="jopsSASS.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Application Settings</title>
+</head>
+
+<body>
+
+  <div class="container" id="cont">
+    <div class="row mb-3">
+      <div class="col-8" id="allCard">
+        <div class="card shadow">
+          <span id="arowback">
+            <a href="Jops.html">
+              <button type="button" class="btn btn-link">
+                <i class="bi bi-chevron-left"></i> &nbsp;Back
+              </button>
+            </a>
+          </span>
+          <h6 id="jop">&nbsp;Job application settings</h6>
+          <div class="card">
+            <div class="card-body">
+              <div class="form-check form-switch">
+                <input id="btntogle" class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
+                <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+              </div>
+              <h6 id="textsave">Save and manage your resumes and answers</h6>
+              Allow LinkedIn to save your resumes and answers about your work
+              experience and skills. You can always change your answers when
+              you apply.
+
+              <hr />
+              <h6>Manage your resumes</h6>
+              You can submit the following resumes with your application.
+              <br />
+              <br />
+              <button id="btnUpload" type="button" class="btn btn-primary btn-lg">
+                Upload resume
+              </button>
+              <br />
+              <small class="muted">DOC, DOCX, PDF (5MB)</small>
+            </div>
+          </div>
+          <h6>
+            &nbsp; <i class="bi bi-gear-wide-connected"></i>&nbsp;Your privacy
+            is important
+          </h6>
+          <p>
+            &nbsp; &nbsp; We include a copy of your full profile with your
+            application.<br />
+            &nbsp; &nbsp; <a href="">Learn</a> about what we do with your
+            resume.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

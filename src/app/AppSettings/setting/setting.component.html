@@ -1,0 +1,77 @@
+<div class="container" id="cont">
+  <div class="row mb-3">
+    <div class="col-8" id="allCard">
+      <div class="card shadow">
+        <span id="arowback">
+          <a href="Jops.html">
+            <button type="button" class="btn btn-link">
+              <i class="bi bi-chevron-left"></i> &nbsp;Back
+            </button>
+          </a>
+        </span>
+        <h6 id="jop">&nbsp;Job application settings</h6>
+        <div class="card">
+          <div class="card-body">
+            <div class="form-check form-switch">
+              <input id="btntogle" class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
+              <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+            </div>
+            <h6 id="textsave">Save and manage your resumes and answers</h6>
+            Allow LinkedIn to save your resumes and answers about your work
+            experience and skills. You can always change your answers when
+            you apply.
+
+            <hr />
+            <h6>Manage your resumes</h6>
+            You can submit the following resumes with your application.
+            <br />
+            <br />
+            <div *ngIf="files" class="card mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                <br>
+                <br>
+                <div class="col-md-4">
+                  <img src="assets/img/pdf.jpg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <app-modellsetting *ngFor="let pdf of pdfArray index as i" [pdfArraaay]="pdf"></app-modellsetting>
+              </div>
+            </div>
+
+            <br>
+            <input id="Uplaoder" style="border-radius: 12px;" multiple="multiple" type="file"
+              (change)="onFileSelected($event)" class="file-upload btn-primary btn-lg">
+            <br>
+            <br>
+
+            <br />
+          </div>
+        </div>
+        <!-- <h6>
+          &nbsp; <i class="bi bi-gear-wide-connected"></i>&nbsp;Your privacy
+          is important
+        </h6> -->
+
+
+        <br>
+        <div>
+          <button *ngIf="files" (click)="SaveFilseInDataBase()" style="border-radius: 12px;" type="button"
+            class="btn btn-outline-primary">
+            Save File</button>
+        </div>
+        <p *ngIf="!files">No File Selected ....</p>
+        <div class="modal-footer">
+
+          <button style="border-radius: 12px;" type="button" class="btn btn-outline-primary">Creat From
+            Profiel</button>
+
+        </div>
+      </div>
+    </div>
+    <p>
+      &nbsp; &nbsp; We include a copy of your full profile with your
+      application.<br />
+      &nbsp; &nbsp; <a href="">Learn</a> about what we do with your
+      resume.
+    </p>
+  </div>
+</div>

@@ -1,0 +1,95 @@
+<app-header></app-header>
+<br>
+<div class="allDives">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body" *ngFor="let item of cardArray">
+            <div class="ALLcard">
+              <img id="img" src="assets/img/1.jfif" class="img-fluid rounded-start" />
+              <div id="allcontact">
+                <h3 id="titel" (click)="addNewItem(item)">{{item.joptitle}} </h3>
+                <article id="art">
+                  <article class="text">
+                    <br />
+                    {{item.namecompany}}
+                    <br>
+                    {{item.jopaddress}}
+                    <br>
+                    {{item.joptype}} <br />
+                    <span>
+                      <svg id="span" viewBox="0 0 24 24">
+                        <path
+                          d="M12 20a8 8 0 010-16 7.91 7.91 0 014.9 1.69l-1.43 1.42a6 6 0 101.42 1.42l3.82-3.82a1 1 0 000-1.41A1 1 0 0020 3a1 1 0 00-.7.29l-1 1A10 10 0 1022 12h-2a8 8 0 01-8 8zm5-8a5 5 0 11-5-5 4.93 4.93 0 012.76.82l-2.24 2.24A2.24 2.24 0 0012 10a2 2 0 102 2 2.24 2.24 0 00-.07-.51l2.24-2.24A5 5 0 0117 12z">
+                        </path>
+                      </svg>
+                      &nbsp;&nbsp;
+                      Actively reciting
+                      <br />
+                    </span>
+                  </article>
+                </article>
+                <p id="hours">2 Hours ago</p>
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-7">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-body" *ngIf=(flag)>
+              <h2 class="card-title">{{deti.joptitle}}</h2>
+              <p class="card-text">
+                {{deti.namecompany}} &nbsp; {{deti.jopaddress}}
+                <br>
+                Call Us :{{deti.PhoneCompany}}
+              </p>
+              <i class="bi bi-briefcase-fill"></i>&nbsp;&nbsp;&nbsp;Contract · {{deti.contract}}
+              <br><br>
+              <i class="bi bi-table"></i>&nbsp;&nbsp;&nbsp;{{deti.employees}} employees · Internet
+              <br>
+              <br>
+              <i class="bi bi-person-workspace"></i>&nbsp;&nbsp;&nbsp;2 school alumni
+              <br><br>
+              <i class="bi bi-lightbulb-fill"></i>&nbsp;&nbsp;&nbsp;See how you compare to 55 applicants. Try Premium
+              for free
+              <br>
+              <br>
+              <span>
+                <svg id="span" viewBox="0 0 24 24">
+                  <path
+                    d="M12 20a8 8 0 010-16 7.91 7.91 0 014.9 1.69l-1.43 1.42a6 6 0 101.42 1.42l3.82-3.82a1 1 0 000-1.41A1 1 0 0020 3a1 1 0 00-.7.29l-1 1A10 10 0 1022 12h-2a8 8 0 01-8 8zm5-8a5 5 0 11-5-5 4.93 4.93 0 012.76.82l-2.24 2.24A2.24 2.24 0 0012 10a2 2 0 102 2 2.24 2.24 0 00-.07-.51l2.24-2.24A5 5 0 0117 12z">
+                  </path>
+                </svg>
+                &nbsp;&nbsp;
+                Actively reciting
+                <br />
+                <br>
+              </span>
+              <button type="button" class="btn btn-primary">Applyed</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+              <button type="button" class="btn btn-outline-primary">Save</button>
+              <br>
+              <br>
+              <a style="text-decoration:underline">About THis job. </a>
+              <br>
+              {{deti.About}}
+              <br>
+              <br>
+              <h3>
+                {{deti.jobDesc}}
+              </h3>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
